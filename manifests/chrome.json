@@ -1,15 +1,19 @@
 {
   "manifest_version": 3,
   "name": "Knox Portal Obfuscator",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Masks license keys, IMEIs, serials, emails and MACs on the Samsung Knox portal for safe screen sharing.",
-  "permissions": ["storage"],
-  "host_permissions": ["*://*.samsungknox.com/*"],
+  "permissions": [
+    "storage"
+  ],
+  "host_permissions": [
+    "*://*.samsungknox.com/*"
+  ],
   "background": {
     "service_worker": "background.js"
   },
   "action": {
-    "default_title": "Knox Obfuscator — click to pause/resume",
+    "default_title": "Knox Obfuscator \u2014 click to pause/resume",
     "default_icon": {
       "16": "icons/icon16.png",
       "48": "icons/icon48.png",
@@ -19,8 +23,13 @@
   "options_page": "options.html",
   "content_scripts": [
     {
-      "matches": ["*://*.samsungknox.com/*"],
-      "js": ["config.js", "content.js"],
+      "matches": [
+        "*://*.samsungknox.com/*"
+      ],
+      "js": [
+        "config.js",
+        "content.js"
+      ],
       "run_at": "document_idle",
       "all_frames": true
     }
