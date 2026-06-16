@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "Knox Portal Obfuscator",
   "version": "1.0.0",
-  "description": "Masks sensitive data (license keys, IMEIs, serials, emails, MACs) on the Samsung Knox portal for safe screen sharing. Click the toolbar icon to pause/resume.",
+  "description": "Masks license keys, IMEIs, serials, emails and MACs on the Samsung Knox portal for safe screen sharing.",
   "permissions": ["storage", "scripting", "activeTab"],
   "host_permissions": ["*://*.samsungknox.com/*"],
   "background": {
