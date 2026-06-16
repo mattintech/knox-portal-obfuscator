@@ -1,0 +1,17 @@
+# local-only: contains REAL data captured from the live portal — never commit
+PORTAL_FINDINGS.md
+
+# build output
+dist/
+
+# python dev env (CDP inspection tooling)
+.venv/
+__pycache__/
+*.pyc
+
+# os
+.DS_Store
+
+# editor
+.vscode/
+.idea/
