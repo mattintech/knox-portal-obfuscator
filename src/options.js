@@ -25,7 +25,7 @@ function renderMode() {
 
 function renderRules() {
   const ul = $("rules");
-  ul.innerHTML = "";
+  ul.replaceChildren();
   for (const rule of RULE_DEFS) {
     const li = document.createElement("li");
     const label = document.createElement("label");
