@@ -11,9 +11,12 @@ function flash(msg) {
 
 function renderMode() {
   const on = state.enabled;
-  $("modeName").innerHTML = on
-    ? '<span class="pill on">PRIVATE</span>'
-    : '<span class="pill off">SHOW</span>';
+  const pill = document.createElement("span");
+  pill.className = on ? "pill on" : "pill off";
+  pill.textContent = on ? "PRIVATE" : "SHOW";
+  const mn = $("modeName");
+  mn.textContent = "";
+  mn.appendChild(pill);
   $("modeHint").textContent = on
     ? "Sensitive values are masked — safe to screen share."
     : "Real values visible. (Copying works in either mode — hover a value for the COPY pill.)";
